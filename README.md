@@ -1,1 +1,1 @@
-# Azure_Data_Factory_COVID-19_Reporting
+# Azure Data Factory COVID-19 Reporting
