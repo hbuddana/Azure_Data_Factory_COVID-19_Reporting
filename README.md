@@ -12,3 +12,24 @@
 
 ### Destination: 📥📍
 - Azure Data Lake Gen2 Storage
+
+## Tools ⚙
+
+### Data Integration/Ingestion
+
+- ADF Data Flows within the Data Factory
+
+### Transformation
+
+- Data Flows within the Data Factory
+- DataBricks
+
+### Data Warehouse Solution
+
+- Azure SQL Database
+
+### Visualization
+
+- Power BI Desktop
+- Power BI Service
+
