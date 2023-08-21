@@ -33,3 +33,4 @@
 - Power BI Desktop
 - Power BI Service
 
+### All the steps performed in this project are available as images in the [Covidreporting_Azure_Screenshots] (https://github.com/hbuddana/Azure_Data_Factory_COVID-19_Reporting/tree/main/Covidreporting_Azure_Screenshots) folder in this repository.
