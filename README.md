@@ -59,6 +59,6 @@ Four different datasets were ingested from both the ECDC website and azure blob 
 
 We used various components of ADF Pipeline activities to ingest the data from both HTTP Data Source and Azure Storage Account to Azure DataLake. Some of those activities are;
 
-Validation Activity
-Get Metadata Activity
-Copy Activity
+- Validation Activity
+- Get Metadata Activity
+- Copy Activity
