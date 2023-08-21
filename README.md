@@ -47,4 +47,4 @@
 - HD Insight Cluster
 
 # Solution Architecture Overview
-![Solution](SOLUTION_ARCH.png)
+![Solution](https://github.com/hbuddana/Azure_Data_Factory_COVID-19_Reporting/blob/main/Covidreporting_Azure_Screenshots/3.Environment_Setup/SOLUTION_ARCH.png)
