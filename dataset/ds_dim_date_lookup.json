@@ -1,0 +1,77 @@
+{
+	"name": "ds_dim_date_lookup",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_adls_covidreportingdl",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "lookup"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "dim_date.csv",
+				"folderPath": "dim_date",
+				"fileSystem": "lookup"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "date_key",
+				"type": "String"
+			},
+			{
+				"name": "date",
+				"type": "String"
+			},
+			{
+				"name": "year",
+				"type": "String"
+			},
+			{
+				"name": "month",
+				"type": "String"
+			},
+			{
+				"name": "day",
+				"type": "String"
+			},
+			{
+				"name": "day_name",
+				"type": "String"
+			},
+			{
+				"name": "day_of_year",
+				"type": "String"
+			},
+			{
+				"name": "week_of_month",
+				"type": "String"
+			},
+			{
+				"name": "week_of_year",
+				"type": "String"
+			},
+			{
+				"name": "month_name",
+				"type": "String"
+			},
+			{
+				"name": "year_month",
+				"type": "String"
+			},
+			{
+				"name": "year_week",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

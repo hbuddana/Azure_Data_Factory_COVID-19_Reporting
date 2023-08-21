@@ -1,0 +1,44 @@
+{
+	"name": "ds_ecdc_raw_csv_http",
+	"properties": {
+		"description": "Source for ingestion of data from HTTP",
+		"linkedServiceName": {
+			"referenceName": "Is_http_opendata_ecdc_europa_eu_fixed",
+			"type": "LinkedServiceReference",
+			"parameters": {
+				"sourceBaseURL": {
+					"value": "@dataset().baseURL",
+					"type": "Expression"
+				}
+			}
+		},
+		"parameters": {
+			"relativeURL": {
+				"type": "string"
+			},
+			"baseURL": {
+				"type": "String"
+			}
+		},
+		"folder": {
+			"name": "raw"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation",
+				"relativeUrl": {
+					"value": "@dataset().relativeURL",
+					"type": "Expression"
+				}
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
