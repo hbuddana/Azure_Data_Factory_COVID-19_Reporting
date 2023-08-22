@@ -63,7 +63,7 @@ We used various components of ADF Pipeline activities to ingest the data from bo
 - Get Metadata Activity
 - Copy Activity
 
-### 1- Population Data
+### 1- Population Data : Load into Storage Account and move it to Destination Data Lake
 Ingest "population by age" data for all EU Countries into the Data Lake to support the machine learning models with the data to predict an increase in Covid-19 mortality rate.
 
 ### Solution Flow
@@ -79,6 +79,24 @@ Ingest "population by age" data for all EU Countries into the Data Lake to suppo
 - Check metadata counts before loading the data using the IF Condition
 - Finally Load Data into our destination
 6. ScheduleTrigger
+
+
+### Pipeline Design :
+![Pipeline](https://github.com/hbuddana/Azure_Data_Factory_COVID-19_Reporting/blob/main/Covidreporting_Azure_Screenshots/4.Data%20Ingestion%20from%20Blob/13.delete_after_copy.png)
+
+### 2 - ECDC Data from Web to Destination Data Lake
+
+### ECDC Data Content - Four files of CSV :
+1. Case & Deaths Data.csv
+2. Hospital Admission Data.csv
+3. testing.csv
+4. country_response.csv
+
+
+### Solution Flow
+![SOLUTION](https://github.com/hbuddana/Azure_Data_Factory_COVID-19_Reporting/assets/65592890/4f853edd-61b2-4479-be1f-aca81605fbcf)
+
+
 
 
 
