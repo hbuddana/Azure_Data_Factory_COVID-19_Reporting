@@ -142,6 +142,79 @@ The Cases and Deaths data together with the Hospital admissions data was transfo
 ![6 lookup](https://github.com/hbuddana/Azure_Data_Factory_COVID-19_Reporting/assets/65592890/b83197b6-4fff-4b59-a832-7f6c7745c361)
 
 
+# Data Flows (2) Hospital Admissions Data:
+
+### Solution Flow
+![Screenshot 2023-08-22 115705](https://github.com/hbuddana/Azure_Data_Factory_COVID-19_Reporting/assets/65592890/6936a920-d985-424c-892f-a285f8a16b11)
+
+### Steps:
+1. Hospital Admissions Source (Azure Data Lake Storage Gen2 )
+2. Select only the required columns
+3. Lookup Country to get country_code_2_digit,country_code_3_digit columns
+4. Select only the required columns
+5. Condition Split Weekly, Daily Split condition
+  - indicator=='Weekly new hospital admissions per 100k' || indicator=='Weekly new ICU admissions per 100k'
+  - indicator== "Daily hospital occupancy" || indicator=="Daily ICU occupancy"
+6. For Weekly Path
+- Join with Date to get ecdc_Year_week, week_start_date, week_End_date
+- Piovt Counts using indicator Columns(confirmed cases, deaths) and get the sum of daily cases count
+- Sort data using reported_year_week ASC and Country DESC
+- Select only required columns for sink
+- Create a sink dataset (Azure Data Lake Storage Gen2)
+- Schedule Trigger
+7. For Daily Path
+- Pivot Counts using indicator Columns(confirmed cases, deaths) and get the sum of daily cases count
+- Sort Data using reported_year_week ASC and Country DESC
+- Select only required columns for sink
+- Create a sink dataset (Azure Data Lake Storage Gen2)
+- Used Schedule Trigger
+
+![pllll](https://github.com/hbuddana/Azure_Data_Factory_COVID-19_Reporting/assets/65592890/79f249e4-44a5-4480-9417-3a2417e5d44a)
+
+# Databricks Activity (3) -- Population File:
+
+![Screenshot 2023-08-22 120411](https://github.com/hbuddana/Azure_Data_Factory_COVID-19_Reporting/assets/65592890/28d97faf-7242-4116-be97-002a8a41422e)
+
+# Copy Data to Azure SQL
+1- Copy Cases and Deaths
+2- Copy hospital admissions data
+3- Copy testing data
+
+![4 pl_succ](https://github.com/hbuddana/Azure_Data_Factory_COVID-19_Reporting/assets/65592890/dea9e004-a556-4bc9-929a-d7239d6a9359)
+
+
+![7 PL-SUCC](https://github.com/hbuddana/Azure_Data_Factory_COVID-19_Reporting/assets/65592890/75dc0a79-fb9e-4963-97bd-4303677aa775)
+
+# Reporting via Power BI
+
+1- Create a Connection from Azure SQL to Power Bi and load the data
+2- Analyze the data to get the total confirmed cases and deaths count
+3- Identify the trends in data based on reporting date
+4- Publish the report to Power BI Server
+5- Publish to web
+
+# Covid-19 Trend in the EU/EEA & UK 2020 by Cases, Deaths, Hospital Occupancy, and ICU Occupancy
+![Screenshot 2023-08-22 121510](https://github.com/hbuddana/Azure_Data_Factory_COVID-19_Reporting/assets/65592890/dd18e69a-2db9-4d45-9fa9-a89c9f960af4)
+
+# Covid-19 Cases and Death breakdown by population in the UK, France, and Germany
+![Screenshot 2023-08-22 121924](https://github.com/hbuddana/Azure_Data_Factory_COVID-19_Reporting/assets/65592890/cfea642a-8fd5-4c0f-86d6-68cf9bf687cc)
+
+# Total Number of covid tests carried out vs Confirmed Cases
+![Screenshot 2023-08-22 122141](https://github.com/hbuddana/Azure_Data_Factory_COVID-19_Reporting/assets/65592890/2b38f5f2-aef5-49a9-a828-5230708decbc)
+
+# Power BI Dashboard
+[Dashboard Link](https://app.powerbi.com/view?r=eyJrIjoiODhiN2FiZGMtMWRkMy00ZWZjLWJiNWItNjY1ZjQ5YmFjYzkwIiwidCI6IjcwZGUxOTkyLTA3YzYtNDgwZi1hMzE4LWExYWZjYmEwMzk4MyIsImMiOjN9)
+
+# Used Technologies
+Azure DataFactory
+Azure HDinsight (Hive)
+Azure Databricks (Pyspark, SparkSql)
+Azure Storage Account
+Azure Data Lake Gen2
+Azure SQL Database
+
+
+
 
 
 
