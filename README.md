@@ -49,7 +49,7 @@
 # Solution Architecture Overview
 ![Solution](https://github.com/hbuddana/Azure_Data_Factory_COVID-19_Reporting/blob/main/Covidreporting_Azure_Screenshots/3.Environment_Setup/SOLUTION_ARCH.png)
 
-### Data Extraction/Data Ingestion
+### 1. Data Extraction/Data Ingestion
 Four different datasets were ingested from both the ECDC website and azure blob storage into Datalake Gen2. They are - 
 
 - Cases and Deaths Data
@@ -63,7 +63,7 @@ We used various components of ADF Pipeline activities to ingest the data from bo
 - Get Metadata Activity
 - Copy Activity
 
-### 1- Population Data : Load into Storage Account and move it to Destination Data Lake
+### Population Data : Load into Storage Account and move it to Destination Data Lake
 Ingest "population by age" data for all EU Countries into the Data Lake to support the machine learning models with the data to predict an increase in Covid-19 mortality rate.
 
 ### Solution Flow
@@ -84,7 +84,7 @@ Ingest "population by age" data for all EU Countries into the Data Lake to suppo
 ### Pipeline Design :
 ![Pipeline](https://github.com/hbuddana/Azure_Data_Factory_COVID-19_Reporting/blob/main/Covidreporting_Azure_Screenshots/4.Data%20Ingestion%20from%20Blob/13.delete_after_copy.png)
 
-### 2 - ECDC Data from Web to Destination Data Lake
+### ECDC Data from Web to Destination Data Lake
 
 ### ECDC Data Content - Four files of CSV :
 1. Case & Deaths Data.csv
@@ -95,6 +95,24 @@ Ingest "population by age" data for all EU Countries into the Data Lake to suppo
 
 ### Solution Flow
 ![SOLUTION](https://github.com/hbuddana/Azure_Data_Factory_COVID-19_Reporting/assets/65592890/4f853edd-61b2-4479-be1f-aca81605fbcf)
+
+Steps:
+1. Create a Linked Service using an HTTP connector
+2. Create a Source Data Set
+3. Create a Linked Service To Azure Data Lake storage (GEN2)
+4. Create a Sink Data set
+5. Create a Pipeline With Parameters & Variables
+6. Lookup to get all the parameters from json file, then pass it to ForEach ECDC DATA as shown below
+7. Schedule Trigger
+
+![Screenshot 2023-08-22 112844](https://github.com/hbuddana/Azure_Data_Factory_COVID-19_Reporting/assets/65592890/1db319c4-03ad-4187-b19e-73ab9517a651)
+
+### Pipeline Design :
+
+![13 changes_madeto_pl](https://github.com/hbuddana/Azure_Data_Factory_COVID-19_Reporting/assets/65592890/ed161f6b-2e54-45d0-908a-d7ffcf680b27)
+
+# 2. DATA TRANSFORMATION
+
 
 
 
