@@ -175,7 +175,7 @@ The Cases and Deaths data together with the Hospital admissions data was transfo
 
 ![Screenshot 2023-08-22 120411](https://github.com/hbuddana/Azure_Data_Factory_COVID-19_Reporting/assets/65592890/28d97faf-7242-4116-be97-002a8a41422e)
 
-# Copy Data to Azure SQL
+# 3. Copy Data to Azure SQL
 1- Copy Cases and Deaths
 2- Copy hospital admissions data
 3- Copy testing data
@@ -185,7 +185,7 @@ The Cases and Deaths data together with the Hospital admissions data was transfo
 
 ![7 PL-SUCC](https://github.com/hbuddana/Azure_Data_Factory_COVID-19_Reporting/assets/65592890/75dc0a79-fb9e-4963-97bd-4303677aa775)
 
-# Reporting via Power BI
+# 4. Reporting via Power BI
 
 1. Create a Connection from Azure SQL to Power Bi and load the data
 2. Analyze the data to get the total confirmed cases and deaths count
