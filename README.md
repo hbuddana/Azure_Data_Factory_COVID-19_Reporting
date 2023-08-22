@@ -196,22 +196,28 @@ The Cases and Deaths data together with the Hospital admissions data was transfo
 # Covid-19 Trend in the EU/EEA & UK 2020 by Cases, Deaths, Hospital Occupancy, and ICU Occupancy
 ![Screenshot 2023-08-22 121510](https://github.com/hbuddana/Azure_Data_Factory_COVID-19_Reporting/assets/65592890/dd18e69a-2db9-4d45-9fa9-a89c9f960af4)
 
+
 # Covid-19 Cases and Death breakdown by population in the UK, France, and Germany
 ![Screenshot 2023-08-22 121924](https://github.com/hbuddana/Azure_Data_Factory_COVID-19_Reporting/assets/65592890/cfea642a-8fd5-4c0f-86d6-68cf9bf687cc)
+
+
 
 # Total Number of covid tests carried out vs Confirmed Cases
 ![Screenshot 2023-08-22 122141](https://github.com/hbuddana/Azure_Data_Factory_COVID-19_Reporting/assets/65592890/2b38f5f2-aef5-49a9-a828-5230708decbc)
 
+
+
 # Power BI Dashboard
 [Dashboard Link](https://app.powerbi.com/view?r=eyJrIjoiODhiN2FiZGMtMWRkMy00ZWZjLWJiNWItNjY1ZjQ5YmFjYzkwIiwidCI6IjcwZGUxOTkyLTA3YzYtNDgwZi1hMzE4LWExYWZjYmEwMzk4MyIsImMiOjN9)
 
+
 # Used Technologies
-Azure DataFactory
-Azure HDinsight (Hive)
-Azure Databricks (Pyspark, SparkSql)
-Azure Storage Account
-Azure Data Lake Gen2
-Azure SQL Database
+- Azure DataFactory
+- Azure HDinsight (Hive)
+- Azure Databricks (Pyspark, SparkSql)
+- Azure Storage Account
+- Azure Data Lake Gen2
+- Azure SQL Database
 
 
 
