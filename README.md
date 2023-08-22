@@ -49,7 +49,7 @@
 # Solution Architecture Overview
 ![Solution](https://github.com/hbuddana/Azure_Data_Factory_COVID-19_Reporting/blob/main/Covidreporting_Azure_Screenshots/3.Environment_Setup/SOLUTION_ARCH.png)
 
-### 1. Data Extraction/Data Ingestion
+### DATA EXTRACTION/ INGESTION
 Four different datasets were ingested from both the ECDC website and azure blob storage into Datalake Gen2. They are - 
 
 - Cases and Deaths Data
@@ -112,6 +112,37 @@ Steps:
 ![13 changes_madeto_pl](https://github.com/hbuddana/Azure_Data_Factory_COVID-19_Reporting/assets/65592890/ed161f6b-2e54-45d0-908a-d7ffcf680b27)
 
 # 2. DATA TRANSFORMATION
+
+The Cases and Deaths data together with the Hospital admissions data was transformed using ADF Data flows. The Data Flows transformation used on both dataset include
+
+- Select transformation
+- Lookup transformation
+- Filter transformation
+- Join transformation
+- Sort transformation
+- Conditional split transformation
+- Derived columns transformation
+- Sink transformation
+
+# Data Flows (1) Cases & Deaths Data:
+
+### Solution Flow
+![Screenshot 2023-08-22 115115](https://github.com/hbuddana/Azure_Data_Factory_COVID-19_Reporting/assets/65592890/9685b3ab-7db3-4657-b799-2ace7f38a8bc)
+
+### Steps:
+1. Cases And Deaths Source (Azure Data Lake Storage Gen2 )
+2. Filter Europe-Only Data
+3. Select only the required columns
+4. PivotCounts using indicator Columns(confirmed cases, deaths) and get the sum of daily cases count
+5. Lookup Country to get country_code_2_digit,country_code_3_digit columns
+6. Select Only the required columns for the Sink
+7. Create a Sink dataset (Azure Data Lake Storage Gen2)
+8. Used Schedule Trigger
+
+![6 lookup](https://github.com/hbuddana/Azure_Data_Factory_COVID-19_Reporting/assets/65592890/b83197b6-4fff-4b59-a832-7f6c7745c361)
+
+
+
 
 
 
