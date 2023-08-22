@@ -187,11 +187,11 @@ The Cases and Deaths data together with the Hospital admissions data was transfo
 
 # Reporting via Power BI
 
-1- Create a Connection from Azure SQL to Power Bi and load the data
-2- Analyze the data to get the total confirmed cases and deaths count
-3- Identify the trends in data based on reporting date
-4- Publish the report to Power BI Server
-5- Publish to web
+1. Create a Connection from Azure SQL to Power Bi and load the data
+2. Analyze the data to get the total confirmed cases and deaths count
+3. Identify the trends in data based on reporting date
+4. Publish the report to Power BI Server
+5. Publish to web
 
 # Covid-19 Trend in the EU/EEA & UK 2020 by Cases, Deaths, Hospital Occupancy, and ICU Occupancy
 ![Screenshot 2023-08-22 121510](https://github.com/hbuddana/Azure_Data_Factory_COVID-19_Reporting/assets/65592890/dd18e69a-2db9-4d45-9fa9-a89c9f960af4)
