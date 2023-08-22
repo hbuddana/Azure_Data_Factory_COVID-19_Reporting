@@ -49,8 +49,6 @@
 # Solution Architecture Overview
 ![Solution](https://github.com/hbuddana/Azure_Data_Factory_COVID-19_Reporting/blob/main/Covidreporting_Azure_Screenshots/3.Environment_Setup/SOLUTION_ARCH.png)
 
-<img src="https://github.com/hbuddana/Azure_Data_Factory_COVID-19_Reporting/blob/main/Covidreporting_Azure_Screenshots/3.Environment_Setup/SOLUTION_ARCH.png" alt="Solution" style="border: 2px solid black;">
-
 
 ### DATA EXTRACTION/ INGESTION
 Four different datasets were ingested from both the ECDC website and azure blob storage into Datalake Gen2. They are - 
@@ -60,7 +58,7 @@ Four different datasets were ingested from both the ECDC website and azure blob 
 - Population Data
 - Test Conducted Data
 
-We used various components of ADF Pipeline activities to ingest the data from both HTTP Data Source and Azure Storage Account to Azure DataLake. Some of those activities are;
+We used various components of ADF Pipeline activities to ingest the data from both HTTP Data Source and Azure Storage Account to Azure DataLake. Some of those activities are:
 
 - Validation Activity
 - Get Metadata Activity
