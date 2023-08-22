@@ -62,3 +62,37 @@ We used various components of ADF Pipeline activities to ingest the data from bo
 - Validation Activity
 - Get Metadata Activity
 - Copy Activity
+
+### 1- Population Data
+Ingest "population by age" data for all EU Countries into the Data Lake to support the machine learning models with the data to predict an increase in Covid-19 mortality rate.
+
+### Solution Flow
+![SolutionFlow](https://github.com/hbuddana/Azure_Data_Factory_COVID-19_Reporting/blob/main/Covidreporting_Azure_Screenshots/4.Data%20Ingestion%20from%20Blob/Module_Solution.jpeg)
+
+### Steps:
+1. Create a Linked Service To Azure Blob Storage
+2. Create a Source Data Set
+3. Create a Linked Service To Azure Data Lake storage (GEN2)
+4. Create a Sink Data set
+5. Create a Pipeline:
+- Execute Copy activity when the file becomes available
+- Check metadata counts before loading the data using the IF Condition
+- Finally Load Data into our destination
+6. ScheduleTrigger
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
