@@ -11,7 +11,7 @@
 - Population Data From Azure Blob Storage (eurostat_data)
 
 ### Destination: 📥📍
-- Azure Data Lake Gen2 Storage
+- Azure Data Lake Gen2 Storage.
 
 ## Tools ⚙
 
